@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.iiitb.org/job#"
+     xml:base="http://www.iiitb.org/job"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:job="http://www.iiitb.org/job#">
+    <owl:Ontology rdf:about="http://www.iiitb.org/job"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#givesKnowledgeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#givesKnowledgeOf"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#isTakenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isTakenBy"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#knows -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#knows"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#teaches"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#isNamed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#isNamed"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#link -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#link"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#Subject -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Subject"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#Teacher -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Teacher"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#Tutorial -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Tutorial"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#C">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Subject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#HADOOP -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#HADOOP">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Subject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#JSP -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#JSP">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Subject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TC1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TC1">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Teacher"/>
+        <knows rdf:resource="http://www.iiitb.org/job#HADOOP"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mein bhi teacher</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.teacher.com/tc2</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TC2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TC2">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Teacher"/>
+        <knows rdf:resource="http://www.iiitb.org/job#C"/>
+        <knows rdf:resource="http://www.iiitb.org/job#JSP"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teacher hu main</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.teacher.com/tc2</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TU1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TU1">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Tutorial"/>
+        <givesKnowledgeOf rdf:resource="http://www.iiitb.org/job#HADOOP"/>
+        <isTakenBy rdf:resource="http://www.iiitb.org/job#TC1"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hadoop tutorial for beginers</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.courseera.com/hadoop</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TU2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TU2">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Tutorial"/>
+        <givesKnowledgeOf rdf:resource="http://www.iiitb.org/job#JSP"/>
+        <isTakenBy rdf:resource="http://www.iiitb.org/job#TC2"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jsp ki tutorial</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.courseera.com/jsp</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TU3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TU3">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Tutorial"/>
+        <givesKnowledgeOf rdf:resource="http://www.iiitb.org/job#C"/>
+        <isTakenBy rdf:resource="http://www.iiitb.org/job#TC2"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C ki tutorial</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.courseera.com/c</link>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

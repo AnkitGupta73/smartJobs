@@ -1,0 +1,231 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:job="http://www.iiitb.org/job#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.iiitb.org/job"/>
+  <owl:Class rdf:about="http://www.iiitb.org/job#Course"/>
+  <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+  <owl:Class rdf:about="http://www.iiitb.org/job#Job"/>
+  <owl:Class rdf:about="http://www.iiitb.org/job#Skill"/>
+  <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+  <owl:Class rdf:about="http://www.iiitb.org/job#Applicant">
+    <rdfs:subClassOf rdf:resource="http://www.iiitb.org/job#User"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.iiitb.org/job#Trainer">
+    <rdfs:subClassOf rdf:resource="http://www.iiitb.org/job#User"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#hasSkill">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Skill"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isPossessedBy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#addSkill">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Skill"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Course"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#obtainedBy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#obtainedBy">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Course"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Skill"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isRequiredBy">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Job"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Skill"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#requires"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isOfferedBy">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Company"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#offersJob"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isTaughtBy">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Trainer"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Course"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#teachesCourse"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isPossessedBy">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#User"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Skill"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#requires">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Skill"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#offersJob">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Job"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Company"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#teachesCourse">
+    <rdfs:range rdf:resource="http://www.iiitb.org/job#Course"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Trainer"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasEmail">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+          <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+          <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+          <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#requiresTwelthMarks">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasContactNumber">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+          <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+          <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+          <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasProfileLink">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasTenthMarks">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasExperience">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#requiresTenthMarks">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasTwelthMarks">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#requiresExperience">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+  </owl:DatatypeProperty>
+  <job:Skill rdf:about="http://www.iiitb.org/job#PYTHON">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </job:Skill>
+  <job:Skill rdf:about="http://www.iiitb.org/job#JSP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </job:Skill>
+  <job:Applicant rdf:about="http://www.iiitb.org/job#I_prabakar@gmail.com_2444">
+    <job:hasSkill>
+      <job:Skill rdf:about="http://www.iiitb.org/job#JAVA">
+        <job:hasName>JAVA</job:hasName>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </job:Skill>
+    </job:hasSkill>
+    <job:hasTwelthMarks>98</job:hasTwelthMarks>
+    <job:hasProfileLink>www.facebook.com/prabhakar</job:hasProfileLink>
+    <job:hasExperience>10</job:hasExperience>
+    <job:hasSkill>
+      <job:Skill rdf:about="http://www.iiitb.org/job#HADOOP">
+        <job:hasName>HADOOP</job:hasName>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </job:Skill>
+    </job:hasSkill>
+    <job:hasName>prabhakar b</job:hasName>
+    <job:hasSkill>
+      <job:Skill rdf:about="http://www.iiitb.org/job#CPP">
+        <job:hasName>CPP</job:hasName>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </job:Skill>
+    </job:hasSkill>
+    <job:hasEmail>prabakar@gmail.com</job:hasEmail>
+    <job:hasContactNumber>9876543210</job:hasContactNumber>
+    <job:hasTenthMarks>55</job:hasTenthMarks>
+  </job:Applicant>
+  <job:Applicant rdf:about="http://www.iiitb.org/job#I_hitesh@gmail.com_8795">
+    <job:hasTenthMarks>88.8</job:hasTenthMarks>
+    <job:hasSkill>
+      <job:Skill rdf:about="http://www.iiitb.org/job#JENA">
+        <job:hasName>JENA</job:hasName>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </job:Skill>
+    </job:hasSkill>
+    <job:hasEmail>hitesh@gmail.com</job:hasEmail>
+    <job:hasName>hitesh agrawal</job:hasName>
+    <job:hasExperience>30</job:hasExperience>
+    <job:hasSkill rdf:resource="http://www.iiitb.org/job#HADOOP"/>
+    <job:hasProfileLink>www.hitesh.com</job:hasProfileLink>
+    <job:hasSkill>
+      <job:Skill rdf:about="http://www.iiitb.org/job#C">
+        <job:hasName>C</job:hasName>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </job:Skill>
+    </job:hasSkill>
+    <job:hasSkill rdf:resource="http://www.iiitb.org/job#JAVA"/>
+    <job:hasContactNumber>8197051592</job:hasContactNumber>
+    <job:hasTwelthMarks>80.8</job:hasTwelthMarks>
+  </job:Applicant>
+  <job:Applicant rdf:about="http://www.iiitb.org/job#I_ankit@gmail.com_3405">
+    <job:hasEmail>ankit@gmail.com</job:hasEmail>
+    <job:hasContactNumber>9988776655</job:hasContactNumber>
+    <job:hasProfileLink>www.ankit.com</job:hasProfileLink>
+    <job:hasSkill>
+      <job:Skill rdf:about="http://www.iiitb.org/job#DOT_NET">
+        <job:hasName>DOT_NET</job:hasName>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </job:Skill>
+    </job:hasSkill>
+    <job:hasSkill rdf:resource="http://www.iiitb.org/job#JAVA"/>
+    <job:hasSkill rdf:resource="http://www.iiitb.org/job#HADOOP"/>
+    <job:hasName>ankit gupta</job:hasName>
+    <job:hasExperience>1</job:hasExperience>
+    <job:hasTwelthMarks>80</job:hasTwelthMarks>
+    <job:hasTenthMarks>60</job:hasTenthMarks>
+  </job:Applicant>
+</rdf:RDF>

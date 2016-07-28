@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.iiitb.org/job#"
+     xml:base="http://www.iiitb.org/job"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:job="http://www.iiitb.org/job#">
+    <owl:Ontology rdf:about="http://www.iiitb.org/job"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#addSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#addSkill">
+        <owl:inverseOf rdf:resource="http://www.iiitb.org/job#obtainedBy"/>
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Course"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#hasSkill">
+        <owl:inverseOf rdf:resource="http://www.iiitb.org/job#isPossessedBy"/>
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#isOfferedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isOfferedBy">
+        <owl:inverseOf rdf:resource="http://www.iiitb.org/job#offersJob"/>
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#isPossessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isPossessedBy">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#isRequiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isRequiredBy">
+        <owl:inverseOf rdf:resource="http://www.iiitb.org/job#requires"/>
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#isTaughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isTaughtBy">
+        <owl:inverseOf rdf:resource="http://www.iiitb.org/job#teachesCourse"/>
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Course"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Trainer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#obtainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#obtainedBy">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#offersJob -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#offersJob">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Company"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#requires">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#teachesCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#teachesCourse">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Trainer"/>
+        <rdfs:range rdf:resource="http://www.iiitb.org/job#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#hasContactNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasContactNumber">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.iiitb.org/job#Company"/>
+                    <rdf:Description rdf:about="http://www.iiitb.org/job#User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasEmail">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.iiitb.org/job#Company"/>
+                    <rdf:Description rdf:about="http://www.iiitb.org/job#User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#hasExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasExperience">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#hasProfileLink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasProfileLink">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#hasTenthMarks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasTenthMarks">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#hasTwelthMarks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#hasTwelthMarks">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#requiresExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#requiresExperience">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#requiresTenthMarks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#requiresTenthMarks">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iiitb.org/job#requiresTwelthMarks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#requiresTwelthMarks">
+        <rdfs:domain rdf:resource="http://www.iiitb.org/job#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#Applicant -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Applicant">
+        <rdfs:subClassOf rdf:resource="http://www.iiitb.org/job#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitb.org/job#Company -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Company"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#Course -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Course"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#Job -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Job"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#Skill -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Skill"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#Trainer -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#Trainer">
+        <rdfs:subClassOf rdf:resource="http://www.iiitb.org/job#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitb.org/job#User -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#User"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#C">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <hasName>C</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#CPP -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#CPP">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <hasName>CPP</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#DOT_NET -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#DOT_NET">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <hasName>DOT_NET</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#HADOOP -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#HADOOP">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <hasName>HADOOP</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#JAVA -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#JAVA">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <hasName>JAVA</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#JENA -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#JENA">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+        <hasName>JENA</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#JSP -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#JSP">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#PYTHON -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#PYTHON">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#Skill"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

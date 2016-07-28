@@ -1,0 +1,39 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://www.iiitb.org/job#addSkill">
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#givesKnowledgeOf"/>
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#giveSkill"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#hasSkill">
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#knows"/>
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#isAwareOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#Course">
+    <owl:equivalentClass rdf:resource="http://www.iiitb.org/job#Tutorial"/>
+    <owl:equivalentClass rdf:resource="http://www.iiitb.org/job#courseName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#hasProfileLink">
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#link"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#hasName">
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#isNamed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#Skill">
+    <owl:equivalentClass rdf:resource="http://www.iiitb.org/job#Subject"/>
+    <owl:equivalentClass rdf:resource="http://www.iiitb.org/job#instructional"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#teachesCourse">
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#teaches"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#Trainer">
+    <owl:equivalentClass rdf:resource="http://www.iiitb.org/job#Teacher"/>
+    <owl:equivalentClass rdf:resource="http://www.iiitb.org/job#tutor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.iiitb.org/job#isTaughtBy">
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#isTakenBy"/>
+    <owl:equivalentProperty rdf:resource="http://www.iiitb.org/job#isTaughtBy"/>
+  </rdf:Description>
+</rdf:RDF>

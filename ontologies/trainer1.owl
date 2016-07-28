@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.iiitb.org/job#"
+     xml:base="http://www.iiitb.org/job"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:job="http://www.iiitb.org/job#">
+    <owl:Ontology rdf:about="http://www.iiitb.org/job"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#giveSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#giveSkill"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#isAwareOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isAwareOf"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#isTaughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitb.org/job#isTaughtBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#isNamed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#isNamed"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#link -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iiitb.org/job#link"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#courseName -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#courseName"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#instructional -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#instructional"/>
+    
+
+
+    <!-- http://www.iiitb.org/job#tutor -->
+
+    <owl:Class rdf:about="http://www.iiitb.org/job#tutor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitb.org/job#CPP -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#CPP">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#courseName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#DATABASE -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#DATABASE">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#courseName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#INSTRUCTIONAL01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#INSTRUCTIONAL01">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#instructional"/>
+        <giveSkill rdf:resource="http://www.iiitb.org/job#CPP"/>
+        <isTaughtBy rdf:resource="http://www.iiitb.org/job#TUTOR01"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object oriented programming c++</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.studytonight.com/cpp/cpp-and-oops-concepts.php</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#INSTRUCTIONAL02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#INSTRUCTIONAL02">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#instructional"/>
+        <giveSkill rdf:resource="http://www.iiitb.org/job#DATABASE"/>
+        <isTaughtBy rdf:resource="http://www.iiitb.org/job#TUTOR02"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relational database management system</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.studytonight.com/dbms/rdbms-concept.php</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#INSTRUCTIONAL03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#INSTRUCTIONAL03">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#instructional"/>
+        <giveSkill rdf:resource="http://www.iiitb.org/job#JAVA"/>
+        <isTaughtBy rdf:resource="http://www.iiitb.org/job#TUTOR03"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object oriented programming JAVA</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.tutorialspoint.com/java/</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#INSTRUCTIONAL04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#INSTRUCTIONAL04">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#instructional"/>
+        <giveSkill rdf:resource="http://www.iiitb.org/job#OODB"/>
+        <isTaughtBy rdf:resource="http://www.iiitb.org/job#TUTOR04"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object oriented database management system</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.odbms.org/</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#INSTRUCTIONAL05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#INSTRUCTIONAL05">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#instructional"/>
+        <giveSkill rdf:resource="http://www.iiitb.org/job#OWL"/>
+        <isTaughtBy rdf:resource="http://www.iiitb.org/job#TUTOR05"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Ontology Language</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.w3.org/2004/OWL/</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#INSTRUCTIONAL06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#INSTRUCTIONAL06">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#instructional"/>
+        <giveSkill rdf:resource="http://www.iiitb.org/job#XML"/>
+        <isTaughtBy rdf:resource="http://www.iiitb.org/job#TUTOR06"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXtensible Markup Language XML</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.w3schools.com/xml/</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#JAVA -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#JAVA">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#courseName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#OODB -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#OODB">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#courseName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#OWL -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#OWL">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#courseName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TUTOR01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TUTOR01">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#tutor"/>
+        <isAwareOf rdf:resource="http://www.iiitb.org/job#CPP"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUTOR 01</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.tutor.com/tutorlist</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TUTOR02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TUTOR02">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#tutor"/>
+        <isAwareOf rdf:resource="http://www.iiitb.org/job#DATABASE"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUTOR 02</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.tutor.com/tutorlist</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TUTOR03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TUTOR03">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#tutor"/>
+        <isAwareOf rdf:resource="http://www.iiitb.org/job#JAVA"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUTOR 03</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.tutor.com/tutorlist</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TUTOR04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TUTOR04">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#tutor"/>
+        <isAwareOf rdf:resource="http://www.iiitb.org/job#OODB"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUTOR 04</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.tutor.com/tutorlist</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TUTOR05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TUTOR05">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#tutor"/>
+        <isAwareOf rdf:resource="http://www.iiitb.org/job#OWL"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUTOR 05</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.tutor.com/tutorlist</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#TUTOR06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#TUTOR06">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#tutor"/>
+        <isAwareOf rdf:resource="http://www.iiitb.org/job#XML"/>
+        <isNamed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TUTOR 06</isNamed>
+        <link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.tutor.com/tutorlist</link>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitb.org/job#XML -->
+
+    <owl:NamedIndividual rdf:about="http://www.iiitb.org/job#XML">
+        <rdf:type rdf:resource="http://www.iiitb.org/job#courseName"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+
